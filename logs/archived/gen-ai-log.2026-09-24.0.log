@@ -1,0 +1,532 @@
+2026-09-24 14:47:03 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - Starting GeanaiApplication using Java 25.0.4 with PID 36378 (/Users/victoralvarezrojas/Documents/desarrollo/java/geanai/target/classes started by victoralvarezrojas in /Users/victoralvarezrojas/Documents/desarrollo/java/geanai)
+2026-09-24 14:47:03 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-09-24 14:47:04 [main] INFO  traceId= spanId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-09-24 14:47:04 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-09-24 14:47:04 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-09-24 14:47:04 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-24 14:47:04 [main] INFO  traceId= spanId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 453 ms
+2026-09-24 14:47:04 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-09-24 14:47:04 [main] INFO  traceId= spanId= o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-09-24 14:47:04 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - Started GeanaiApplication in 1.181 seconds (process running for 1.387)
+2026-09-24 14:47:14 [http-nio-8081-exec-1] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-24 14:47:14 [http-nio-8081-exec-1] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-09-24 14:47:14 [http-nio-8081-exec-1] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-09-24 14:47:14 [http-nio-8081-exec-1] DEBUG traceId= spanId= o.s.a.c.c.a.SimpleLoggerAdvisor - request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='Eres un asistente útil que resume cualquier contenido dado. Asegúrate de que el resumen sea conciso, informativo y capture los puntos clave. Usa un tono amigable y cercano manteniendo la profesionalidad. No respondas nada que no sea el resumen. Si la pregunta no es sobre resumir, responde con 'Solo puedo ayudar con tareas de resumen' y le agregas unos cuantos garabatos chilenos partiendo por el siguiente: maldito hijo de perra!. ', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='dame un recumen en español de esto: That’s nice and simple, but there are a couple of things to point out:
+The first parameter that we pass to app.sessionManager.Put() is the current request
+context. We’ll talk properly about what the request context is and how to use it later in
+the book, but for now you can just think of it as somewhere that the session manager
+temporarily stores information while your handlers are dealing with the request.
+The second parameter (in our case the string "flash") is the key for the specific message
+that we are adding to the session data. We’ll subsequently retrieve the message from the
+session data using this key too.
+If there’s no existing session for the current user (or their session has expired) then a
+new, empty, session for them will automatically be created by the session middleware.
+Next up we want our snippetView handler to retrieve the flash message (if one exists in the
+session for the current user) and pass it to the HTML template for subsequent display.
+Because we want to display the flash message once only, we actually want to retrieve and
+remove the message from the session data. We can do both these operations at the same
+time by using the PopString() method.
+I’ll demonstrate
+', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@1cdc4867}, context={}]
+2026-09-24 14:47:18 [boundedElastic-1] DEBUG traceId= spanId= o.s.a.c.c.a.SimpleLoggerAdvisor - response: {
+  "metadata" : {
+    "empty" : true,
+    "id" : "chatcmpl-ERhpNSEeTV6aY5F2wx71OdtuwIhIK",
+    "model" : "gpt-5.6-luna",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 374,
+      "completionTokens" : 136,
+      "totalTokens" : 510,
+      "cacheReadInputTokens" : null,
+      "cacheWriteInputTokens" : null,
+      "nativeUsage" : {
+        "promptTokens" : 374,
+        "totalTokens" : 510,
+        "completionTokens" : 136
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-ERhpNSEeTV6aY5F2wx71OdtuwIhIK",
+        "reasoningContent" : ""
+      },
+      "text" : "El texto explica cómo funciona el almacenamiento de mensajes temporales en una sesión:\n\n- `app.sessionManager.Put()` recibe el contexto de la solicitud y una clave, en este caso `\"flash\"`, para guardar el mensaje.\n- El contexto de la solicitud permite almacenar información temporal mientras se procesa la petición.\n- Si el usuario no tiene una sesión activa o esta expiró, el middleware crea automáticamente una nueva.\n- Luego, el controlador `snippetView` debe recuperar el mensaje flash y enviarlo a la plantilla HTML.\n- Como el mensaje debe mostrarse una sola vez, se utiliza `PopString()`, que lo obtiene y elimina de la sesión al mismo tiempo.",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-ERhpNSEeTV6aY5F2wx71OdtuwIhIK",
+        "reasoningContent" : ""
+      },
+      "text" : "El texto explica cómo funciona el almacenamiento de mensajes temporales en una sesión:\n\n- `app.sessionManager.Put()` recibe el contexto de la solicitud y una clave, en este caso `\"flash\"`, para guardar el mensaje.\n- El contexto de la solicitud permite almacenar información temporal mientras se procesa la petición.\n- Si el usuario no tiene una sesión activa o esta expiró, el middleware crea automáticamente una nueva.\n- Luego, el controlador `snippetView` debe recuperar el mensaje flash y enviarlo a la plantilla HTML.\n- Como el mensaje debe mostrarse una sola vez, se utiliza `PopString()`, que lo obtiene y elimina de la sesión al mismo tiempo.",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-09-24 15:27:53 [SpringApplicationShutdownHook] INFO  traceId= spanId= o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-24 15:27:53 [tomcat-shutdown] INFO  traceId= spanId= o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-09-24 15:27:55 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - Starting GeanaiApplication using Java 25.0.4 with PID 56263 (/Users/victoralvarezrojas/Documents/desarrollo/java/geanai/target/classes started by victoralvarezrojas in /Users/victoralvarezrojas/Documents/desarrollo/java/geanai)
+2026-09-24 15:27:55 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-09-24 15:27:55 [main] INFO  traceId= spanId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8081 (http)
+2026-09-24 15:27:55 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2026-09-24 15:27:55 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-09-24 15:27:55 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-24 15:27:55 [main] INFO  traceId= spanId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 453 ms
+2026-09-24 15:27:56 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2026-09-24 15:27:56 [main] INFO  traceId= spanId= o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8081 (http) with context path '/'
+2026-09-24 15:27:56 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - Started GeanaiApplication in 1.176 seconds (process running for 1.369)
+2026-09-24 15:28:21 [http-nio-8081-exec-1] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-24 15:28:21 [http-nio-8081-exec-1] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-09-24 15:28:21 [http-nio-8081-exec-1] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-09-24 15:28:21 [http-nio-8081-exec-1] DEBUG traceId= spanId= o.s.a.c.c.a.SimpleLoggerAdvisor - request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='Eres un asistente útil que resume cualquier contenido dado. Asegúrate de que el resumen sea conciso, informativo y capture los puntos clave. Usa un tono amigable y cercano manteniendo la profesionalidad. No respondas nada que no sea el resumen. Si la pregunta no es sobre resumir, responde con 'Solo puedo ayudar con tareas de resumen' y le agregas unos cuantos garabatos chilenos partiendo por el siguiente: maldito hijo de perra!. ', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='dame un recumen en español de esto: That’s nice and simple, but there are a couple of things to point out:
+The first parameter that we pass to app.sessionManager.Put() is the current request
+context. We’ll talk properly about what the request context is and how to use it later in
+the book, but for now you can just think of it as somewhere that the session manager
+temporarily stores information while your handlers are dealing with the request.
+The second parameter (in our case the string "flash") is the key for the specific message
+that we are adding to the session data. We’ll subsequently retrieve the message from the
+session data using this key too.
+If there’s no existing session for the current user (or their session has expired) then a
+new, empty, session for them will automatically be created by the session middleware.
+Next up we want our snippetView handler to retrieve the flash message (if one exists in the
+session for the current user) and pass it to the HTML template for subsequent display.
+Because we want to display the flash message once only, we actually want to retrieve and
+remove the message from the session data. We can do both these operations at the same
+time by using the PopString() method.
+I’ll demonstrate eres un potitio
+', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@1cdc4867}, context={}]
+2026-09-24 15:28:21 [http-nio-8081-exec-1] DEBUG traceId= spanId= o.s.a.c.c.a.SimpleLoggerAdvisor - response: {
+  "metadata" : {
+    "empty" : true,
+    "id" : "",
+    "model" : "",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 0,
+      "completionTokens" : 0,
+      "totalTokens" : 0,
+      "cacheReadInputTokens" : null,
+      "cacheWriteInputTokens" : null,
+      "nativeUsage" : {
+        "promptTokens" : 0,
+        "totalTokens" : 0,
+        "completionTokens" : 0
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : null
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "messageType" : "ASSISTANT"
+      },
+      "text" : "I'm unable to respond to that due to sensitive content. Could we rephrase or discuss something else?",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : null
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "messageType" : "ASSISTANT"
+      },
+      "text" : "I'm unable to respond to that due to sensitive content. Could we rephrase or discuss something else?",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-09-24 15:28:26 [http-nio-8081-exec-2] DEBUG traceId= spanId= o.s.a.c.c.a.SimpleLoggerAdvisor - request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='Eres un asistente útil que resume cualquier contenido dado. Asegúrate de que el resumen sea conciso, informativo y capture los puntos clave. Usa un tono amigable y cercano manteniendo la profesionalidad. No respondas nada que no sea el resumen. Si la pregunta no es sobre resumir, responde con 'Solo puedo ayudar con tareas de resumen' y le agregas unos cuantos garabatos chilenos partiendo por el siguiente: maldito hijo de perra!. ', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='dame un recumen en español de esto: That’s nice and simple, but there are a couple of things to point out:
+The first parameter that we pass to app.sessionManager.Put() is the current request
+context. We’ll talk properly about what the request context is and how to use it later in
+the book, but for now you can just think of it as somewhere that the session manager
+temporarily stores information while your handlers are dealing with the request.
+The second parameter (in our case the string "flash") is the key for the specific message
+that we are adding to the session data. We’ll subsequently retrieve the message from the
+session data using this key too.
+If there’s no existing session for the current user (or their session has expired) then a
+new, empty, session for them will automatically be created by the session middleware.
+Next up we want our snippetView handler to retrieve the flash message (if one exists in the
+session for the current user) and pass it to the HTML template for subsequent display.
+Because we want to display the flash message once only, we actually want to retrieve and
+remove the message from the session data. We can do both these operations at the same
+time by using the PopString() method.
+I’ll demonstrate eres un potitio
+', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@1cdc4867}, context={}]
+2026-09-24 15:28:26 [http-nio-8081-exec-2] DEBUG traceId= spanId= o.s.a.c.c.a.SimpleLoggerAdvisor - response: {
+  "metadata" : {
+    "empty" : true,
+    "id" : "",
+    "model" : "",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 0,
+      "completionTokens" : 0,
+      "totalTokens" : 0,
+      "cacheReadInputTokens" : null,
+      "cacheWriteInputTokens" : null,
+      "nativeUsage" : {
+        "promptTokens" : 0,
+        "totalTokens" : 0,
+        "completionTokens" : 0
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : null
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "messageType" : "ASSISTANT"
+      },
+      "text" : "I'm unable to respond to that due to sensitive content. Could we rephrase or discuss something else?",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : null
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "messageType" : "ASSISTANT"
+      },
+      "text" : "I'm unable to respond to that due to sensitive content. Could we rephrase or discuss something else?",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-09-24 15:28:30 [http-nio-8081-exec-3] DEBUG traceId= spanId= o.s.a.c.c.a.SimpleLoggerAdvisor - request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='Eres un asistente útil que resume cualquier contenido dado. Asegúrate de que el resumen sea conciso, informativo y capture los puntos clave. Usa un tono amigable y cercano manteniendo la profesionalidad. No respondas nada que no sea el resumen. Si la pregunta no es sobre resumir, responde con 'Solo puedo ayudar con tareas de resumen' y le agregas unos cuantos garabatos chilenos partiendo por el siguiente: maldito hijo de perra!. ', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='dame un recumen en español de esto: That’s nice and simple, but there are a couple of things to point out:
+The first parameter that we pass to app.sessionManager.Put() is the current request
+context. We’ll talk properly about what the request context is and how to use it later in
+the book, but for now you can just think of it as somewhere that the session manager
+temporarily stores information while your handlers are dealing with the request.
+The second parameter (in our case the string "flash") is the key for the specific message
+that we are adding to the session data. We’ll subsequently retrieve the message from the
+session data using this key too.
+If there’s no existing session for the current user (or their session has expired) then a
+new, empty, session for them will automatically be created by the session middleware.
+Next up we want our snippetView handler to retrieve the flash message (if one exists in the
+session for the current user) and pass it to the HTML template for subsequent display.
+Because we want to display the flash message once only, we actually want to retrieve and
+remove the message from the session data. We can do both these operations at the same
+time by using the PopString() method.
+I’ll demonstrate eres un potiti
+', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@1cdc4867}, context={}]
+2026-09-24 15:28:33 [boundedElastic-1] DEBUG traceId= spanId= o.s.a.c.c.a.SimpleLoggerAdvisor - response: {
+  "metadata" : {
+    "empty" : true,
+    "id" : "chatcmpl-ERiTIsCNzCXoHx6zDZHfNfXSJcGSi",
+    "model" : "gpt-5.6-luna",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 378,
+      "completionTokens" : 142,
+      "totalTokens" : 520,
+      "cacheReadInputTokens" : null,
+      "cacheWriteInputTokens" : null,
+      "nativeUsage" : {
+        "promptTokens" : 378,
+        "totalTokens" : 520,
+        "completionTokens" : 142
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "refusal" : "",
+        "finishReason" : "STOP",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-ERiTIsCNzCXoHx6zDZHfNfXSJcGSi",
+        "reasoningContent" : ""
+      },
+      "text" : "El texto explica que `app.sessionManager.Put()` recibe dos parámetros: el contexto de la solicitud, donde se almacena temporalmente la información de sesión, y una clave —en este caso, `\"flash\"`— para identificar el mensaje guardado. Si no existe una sesión o ha expirado, el middleware crea una nueva automáticamente. Luego, el controlador `snippetView` debe recuperar el mensaje flash y enviarlo a la plantilla HTML. Como el mensaje debe mostrarse una sola vez, se utiliza `PopString()`, que lo obtiene y elimina simultáneamente de la sesión.",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "refusal" : "",
+        "finishReason" : "STOP",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-ERiTIsCNzCXoHx6zDZHfNfXSJcGSi",
+        "reasoningContent" : ""
+      },
+      "text" : "El texto explica que `app.sessionManager.Put()` recibe dos parámetros: el contexto de la solicitud, donde se almacena temporalmente la información de sesión, y una clave —en este caso, `\"flash\"`— para identificar el mensaje guardado. Si no existe una sesión o ha expirado, el middleware crea una nueva automáticamente. Luego, el controlador `snippetView` debe recuperar el mensaje flash y enviarlo a la plantilla HTML. Como el mensaje debe mostrarse una sola vez, se utiliza `PopString()`, que lo obtiene y elimina simultáneamente de la sesión.",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-09-24 15:28:39 [http-nio-8081-exec-5] DEBUG traceId= spanId= o.s.a.c.c.a.SimpleLoggerAdvisor - request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='Eres un asistente útil que resume cualquier contenido dado. Asegúrate de que el resumen sea conciso, informativo y capture los puntos clave. Usa un tono amigable y cercano manteniendo la profesionalidad. No respondas nada que no sea el resumen. Si la pregunta no es sobre resumir, responde con 'Solo puedo ayudar con tareas de resumen' y le agregas unos cuantos garabatos chilenos partiendo por el siguiente: maldito hijo de perra!. ', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='dame un recumen en español de esto: That’s nice and simple, but there are a couple of things to point out:
+The first parameter that we pass to app.sessionManager.Put() is the current request
+context. We’ll talk properly about what the request context is and how to use it later in
+the book, but for now you can just think of it as somewhere that the session manager
+temporarily stores information while your handlers are dealing with the request.
+The second parameter (in our case the string "flash") is the key for the specific message
+that we are adding to the session data. We’ll subsequently retrieve the message from the
+session data using this key too.
+If there’s no existing session for the current user (or their session has expired) then a
+new, empty, session for them will automatically be created by the session middleware.
+Next up we want our snippetView handler to retrieve the flash message (if one exists in the
+session for the current user) and pass it to the HTML template for subsequent display.
+Because we want to display the flash message once only, we actually want to retrieve and
+remove the message from the session data. We can do both these operations at the same
+time by using the PopString() method.
+I’ll demonstrate eres un pene
+', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@1cdc4867}, context={}]
+2026-09-24 15:28:43 [boundedElastic-1] DEBUG traceId= spanId= o.s.a.c.c.a.SimpleLoggerAdvisor - response: {
+  "metadata" : {
+    "empty" : true,
+    "id" : "chatcmpl-ERiTRXc4Wt9yIpOTL6S0cdawckU1d",
+    "model" : "gpt-5.6-luna",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 377,
+      "completionTokens" : 153,
+      "totalTokens" : 530,
+      "cacheReadInputTokens" : null,
+      "cacheWriteInputTokens" : null,
+      "nativeUsage" : {
+        "promptTokens" : 377,
+        "totalTokens" : 530,
+        "completionTokens" : 153
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "refusal" : "",
+        "finishReason" : "STOP",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-ERiTRXc4Wt9yIpOTL6S0cdawckU1d",
+        "reasoningContent" : ""
+      },
+      "text" : "El texto explica cómo funciona el almacenamiento de mensajes temporales (“flash”) en una sesión:\n\n- `app.sessionManager.Put()` recibe el contexto de la solicitud y una clave, como `\"flash\"`, para guardar el mensaje.\n- El contexto permite almacenar información temporal mientras se procesa la solicitud.\n- Si el usuario no tiene una sesión activa o esta expiró, el middleware crea automáticamente una nueva.\n- Luego, el controlador `snippetView` debe recuperar el mensaje y enviarlo a la plantilla HTML.\n- Como el mensaje debe mostrarse una sola vez, se utiliza `PopString()`, que lo obtiene y elimina simultáneamente de la sesión.",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "refusal" : "",
+        "finishReason" : "STOP",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-ERiTRXc4Wt9yIpOTL6S0cdawckU1d",
+        "reasoningContent" : ""
+      },
+      "text" : "El texto explica cómo funciona el almacenamiento de mensajes temporales (“flash”) en una sesión:\n\n- `app.sessionManager.Put()` recibe el contexto de la solicitud y una clave, como `\"flash\"`, para guardar el mensaje.\n- El contexto permite almacenar información temporal mientras se procesa la solicitud.\n- Si el usuario no tiene una sesión activa o esta expiró, el middleware crea automáticamente una nueva.\n- Luego, el controlador `snippetView` debe recuperar el mensaje y enviarlo a la plantilla HTML.\n- Como el mensaje debe mostrarse una sola vez, se utiliza `PopString()`, que lo obtiene y elimina simultáneamente de la sesión.",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-09-24 15:28:48 [http-nio-8081-exec-7] DEBUG traceId= spanId= o.s.a.c.c.a.SimpleLoggerAdvisor - request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='Eres un asistente útil que resume cualquier contenido dado. Asegúrate de que el resumen sea conciso, informativo y capture los puntos clave. Usa un tono amigable y cercano manteniendo la profesionalidad. No respondas nada que no sea el resumen. Si la pregunta no es sobre resumir, responde con 'Solo puedo ayudar con tareas de resumen' y le agregas unos cuantos garabatos chilenos partiendo por el siguiente: maldito hijo de perra!. ', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='dame un recumen en español de esto: That’s nice and simple, but there are a couple of things to point out:
+The first parameter that we pass to app.sessionManager.Put() is the current request
+context. We’ll talk properly about what the request context is and how to use it later in
+the book, but for now you can just think of it as somewhere that the session manager
+temporarily stores information while your handlers are dealing with the request.
+The second parameter (in our case the string "flash") is the key for the specific message
+that we are adding to the session data. We’ll subsequently retrieve the message from the
+session data using this key too.
+If there’s no existing session for the current user (or their session has expired) then a
+new, empty, session for them will automatically be created by the session middleware.
+Next up we want our snippetView handler to retrieve the flash message (if one exists in the
+session for the current user) and pass it to the HTML template for subsequent display.
+Because we want to display the flash message once only, we actually want to retrieve and
+remove the message from the session data. We can do both these operations at the same
+time by using the PopString() method.
+I’ll demonstrate eres un penesito
+', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@1cdc4867}, context={}]
+2026-09-24 15:28:48 [http-nio-8081-exec-7] DEBUG traceId= spanId= o.s.a.c.c.a.SimpleLoggerAdvisor - response: {
+  "metadata" : {
+    "empty" : true,
+    "id" : "",
+    "model" : "",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 0,
+      "completionTokens" : 0,
+      "totalTokens" : 0,
+      "cacheReadInputTokens" : null,
+      "cacheWriteInputTokens" : null,
+      "nativeUsage" : {
+        "promptTokens" : 0,
+        "totalTokens" : 0,
+        "completionTokens" : 0
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : null
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "messageType" : "ASSISTANT"
+      },
+      "text" : "I'm unable to respond to that due to sensitive content. Could we rephrase or discuss something else?",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : null
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "messageType" : "ASSISTANT"
+      },
+      "text" : "I'm unable to respond to that due to sensitive content. Could we rephrase or discuss something else?",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
