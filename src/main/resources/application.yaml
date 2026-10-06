@@ -6,13 +6,41 @@ app:
 spring:
   application:
     name: geanai
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgresdb
+    username: postgres
+    password: postgres
+  #sql:
+  #  init:
+  #    mode: always
+  #    data-locations: classpath:/db/data.sql
   ai:
     openai:
       api-key: ${SPRING_IA_COURSE}
       chat:
         options:
           model: gpt-5.6-luna
-          reasoning-effort: low
+          reasoning-effort: none
+    chat:
+            memory:
+                repository:
+                    jdbc:
+                        # para local/dev spring AI crea la tabla de forma automatica
+                        initialize-schema: always
+    # Configuración del vector store sobre Postgres (pgvector).
+    # Actúa sobre la base definida en spring.datasource (postgresdb):
+    #   - initialize-schema: crea extensiones, tabla e índice si no existen (nunca los modifica).
+    #   - index-type / distance-type: definen el índice HNSW con métrica coseno;
+    #     la misma métrica se usa en las consultas de similitud.
+    #   - dimensions: debe coincidir con spring.ai.openai.embedding.options.dimensions.
+    # NOTA: si existe un @Bean PgVectorStore propio, este bloque se ignora.
+    vectorstore:
+          pgvector:
+            initialize-schema: true
+            index-type: HNSW
+            distance-type: COSINE_DISTANCE
+            dimensions: 1024
+            max-document-batch-size: 10_000
     google:
       genai:
         api-key: ${GEMINI_API_KEY}

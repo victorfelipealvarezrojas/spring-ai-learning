@@ -3,8 +3,8 @@ package com.genai.chat.openai;
 
 import com.genai.chat.openai.dto.response.SummarizationResponse;
 import org.springframework.ai.chat.client.ChatClientResponse;
-import org.springframework.ai.chat.prompt.ChatOptions;
 import org.springframework.ai.openai.OpenAiChatOptions;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -34,7 +34,7 @@ public class OpenAiChatController {
     private final OpenAIService openAIService;
 
     // spring container instance to beans @Qualifier("beans_name")
-    public OpenAiChatController(ChatClient chatClient,
+    public OpenAiChatController(@Qualifier("openAiChatClientWithMemory") ChatClient chatClient,
                                 OpenAIService openAIService
     ) {
         this.chatClient = chatClient;
