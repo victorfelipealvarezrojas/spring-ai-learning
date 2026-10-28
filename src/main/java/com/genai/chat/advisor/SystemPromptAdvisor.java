@@ -22,7 +22,7 @@ import java.util.List;
 public class SystemPromptAdvisor implements CallAdvisor, StreamAdvisor {
     @Override
     public ChatClientResponse adviseCall(ChatClientRequest chatClientRequest, CallAdvisorChain callAdvisorChain) {
-        log.info("SystemPromptAdvisor adviseCall called with request: {}", chatClientRequest.prompt().getUserMessage().getText());
+        log.info("SystemPromptAdvisor adviseCall called with request:: {}", chatClientRequest.prompt().getUserMessage().getText());
         chatClientRequest = updateSystemMessage(chatClientRequest);
         return callAdvisorChain.nextCall(chatClientRequest);
     }
