@@ -4,9 +4,11 @@ import com.genai.chat.advisor.ErrorWrappingAdvisor;
 import com.genai.chat.advisor.SystemPromptAdvisor;
 
 import com.genai.chat.advisor.ValidationAdvisor;
+import com.genai.rag.config.data.RagConfigData;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.SafeGuardAdvisor;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
+import org.springframework.ai.chat.client.advisor.vectorstore.QuestionAnswerAdvisor;
 import org.springframework.ai.chat.client.advisor.vectorstore.VectorStoreChatMemoryAdvisor;
 import org.springframework.ai.chat.memory.ChatMemory;
 import org.springframework.ai.chat.memory.ChatMemoryRepository;
@@ -14,6 +16,8 @@ import org.springframework.ai.chat.memory.MessageWindowChatMemory;
 import org.springframework.ai.embedding.EmbeddingModel;
 import org.springframework.ai.google.genai.GoogleGenAiChatModel;
 import org.springframework.ai.openai.OpenAiChatModel;
+import org.springframework.ai.vectorstore.SearchRequest;
+import org.springframework.ai.vectorstore.SimpleVectorStore;
 import org.springframework.ai.vectorstore.pgvector.PgVectorStore;
 
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -105,6 +109,24 @@ public class AIProviderConfig {
         return MessageWindowChatMemory.builder()
                 .chatMemoryRepository(chatMemoryRepository)
                 .maxMessages(5)
+                .build();
+    }
+
+    @Bean("OpenAIRagChatClient")
+    public ChatClient OpenAIRagChatClient(
+            OpenAiChatModel openAiChatModel,
+            SimpleVectorStore simpleVectorStore,
+            SimpleLoggerAdvisor simpleLoggerAdvisor,
+            RagConfigData ragConfigData
+    ){
+        return ChatClient
+                .builder(openAiChatModel)
+                .defaultAdvisors(QuestionAnswerAdvisor.builder(simpleVectorStore) // se implementa por nedio de un bean en config/data
+                        .searchRequest(SearchRequest.builder()
+                                .topK(ragConfigData.getTopK())
+                                .similarityThreshold(ragConfigData.getSimilarityThreshold())
+                                .build())
+                        .build(), simpleLoggerAdvisor)
                 .build();
     }
 

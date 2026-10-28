@@ -1,0 +1,914 @@
+2026-10-17 14:57:47 [SpringApplicationShutdownHook] INFO  traceId= spanId= o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-17 14:57:47 [tomcat-shutdown] INFO  traceId= spanId= o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-10-17 14:57:47 [SpringApplicationShutdownHook] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-10-17 14:57:47 [SpringApplicationShutdownHook] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-10-17 14:57:49 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - Starting GeanaiApplication using Java 25.0.4 with PID 34232 (/Users/victoralvarezrojas/Documents/desarrollo/java/geanai/target/classes started by victoralvarezrojas in /Users/victoralvarezrojas/Documents/desarrollo/java/geanai)
+2026-10-17 14:57:49 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-17 14:57:50 [main] INFO  traceId= spanId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2026-10-17 14:57:50 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2026-10-17 14:57:50 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-17 14:57:50 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-17 14:57:50 [main] INFO  traceId= spanId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 555 ms
+2026-10-17 14:57:50 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-17 14:57:50 [main] INFO  traceId= spanId= com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6c24f61d
+2026-10-17 14:57:50 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-17 14:57:50 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - Using the vector table name: vector_store. Is empty: false
+2026-10-17 14:57:50 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - Initializing PGVectorStore schema for table: vector_store in schema: public
+2026-10-17 14:57:50 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - vectorTableValidationsEnabled false
+2026-10-17 14:57:50 [main] WARN  traceId= spanId= o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'ITSupportController' defined in file [/Users/victoralvarezrojas/Documents/desarrollo/java/geanai/target/classes/com/genai/rag/inprompcontext/ITSupportController.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.springframework.ai.chat.client.ChatClient' available: expected single matching bean but found 2: openAiChatClient,openAiChatClientWithMemory
+2026-10-17 14:57:50 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-10-17 14:57:50 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-10-17 14:57:50 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-10-17 14:57:50 [main] INFO  traceId= spanId= o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-17 14:57:50 [main] ERROR traceId= spanId= o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.genai.rag.inprompcontext.ITSupportController required a single bean, but 2 were found:
+	- openAiChatClient: defined by method 'openAiChatClient' in class path resource [com/genai/config/AIProviderConfig.class]
+	- openAiChatClientWithMemory: defined by method 'openAiChatClientWithMemory' in class path resource [com/genai/config/AIProviderConfig.class]
+
+This may be due to missing parameter name information
+
+Action:
+
+Consider marking one of the beans as @Primary, updating the consumer to accept multiple beans, or using @Qualifier to identify the bean that should be consumed
+
+Ensure that your compiler is configured to use the '-parameters' flag.
+You may need to update both your build tool settings as well as your IDE.
+(See https://github.com/spring-projects/spring-framework/wiki/Spring-Framework-6.1-Release-Notes#parameter-name-retention)
+
+
+2026-10-17 14:58:47 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - Starting GeanaiApplication using Java 25.0.4 with PID 34735 (/Users/victoralvarezrojas/Documents/desarrollo/java/geanai/target/classes started by victoralvarezrojas in /Users/victoralvarezrojas/Documents/desarrollo/java/geanai)
+2026-10-17 14:58:47 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-17 14:58:48 [main] INFO  traceId= spanId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2026-10-17 14:58:48 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2026-10-17 14:58:48 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-17 14:58:48 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-17 14:58:48 [main] INFO  traceId= spanId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 554 ms
+2026-10-17 14:58:48 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-17 14:58:48 [main] INFO  traceId= spanId= com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6c24f61d
+2026-10-17 14:58:48 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-17 14:58:48 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - Using the vector table name: vector_store. Is empty: false
+2026-10-17 14:58:48 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - Initializing PGVectorStore schema for table: vector_store in schema: public
+2026-10-17 14:58:48 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - vectorTableValidationsEnabled false
+2026-10-17 14:58:49 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2026-10-17 14:58:49 [main] INFO  traceId= spanId= o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+2026-10-17 14:58:49 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - Started GeanaiApplication in 1.525 seconds (process running for 1.706)
+2026-10-17 15:02:07 [SpringApplicationShutdownHook] INFO  traceId= spanId= o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-17 15:02:07 [tomcat-shutdown] INFO  traceId= spanId= o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-10-17 15:02:07 [SpringApplicationShutdownHook] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-10-17 15:02:07 [SpringApplicationShutdownHook] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-10-17 15:02:09 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - Starting GeanaiApplication using Java 25.0.4 with PID 36471 (/Users/victoralvarezrojas/Documents/desarrollo/java/geanai/target/classes started by victoralvarezrojas in /Users/victoralvarezrojas/Documents/desarrollo/java/geanai)
+2026-10-17 15:02:09 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-17 15:02:09 [main] INFO  traceId= spanId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2026-10-17 15:02:09 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2026-10-17 15:02:09 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-17 15:02:09 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-17 15:02:10 [main] INFO  traceId= spanId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 551 ms
+2026-10-17 15:02:10 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-17 15:02:10 [main] INFO  traceId= spanId= com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6c24f61d
+2026-10-17 15:02:10 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-17 15:02:10 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - Using the vector table name: vector_store. Is empty: false
+2026-10-17 15:02:10 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - Initializing PGVectorStore schema for table: vector_store in schema: public
+2026-10-17 15:02:10 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - vectorTableValidationsEnabled false
+2026-10-17 15:02:10 [main] WARN  traceId= spanId= o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'simpleVectorStore' defined in class path resource [com/genai/rag/config/SimpleRagConfiguration.class]: Unsatisfied dependency expressed through method 'simpleVectorStore' parameter 0: No qualifying bean of type 'org.springframework.ai.embedding.EmbeddingModel' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("openAiChatClientWithMemory")}
+2026-10-17 15:02:10 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-10-17 15:02:10 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-10-17 15:02:10 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-10-17 15:02:10 [main] INFO  traceId= spanId= o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-17 15:02:10 [main] ERROR traceId= spanId= o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'simpleVectorStore' defined in class path resource [com/genai/rag/config/SimpleRagConfiguration.class]: Unsatisfied dependency expressed through method 'simpleVectorStore' parameter 0: No qualifying bean of type 'org.springframework.ai.embedding.EmbeddingModel' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("openAiChatClientWithMemory")}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:546)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1360)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.genai.GeanaiApplication.main(GeanaiApplication.java:10)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.ai.embedding.EmbeddingModel' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Qualifier("openAiChatClientWithMemory")}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:2304)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1732)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 21 common frames omitted
+2026-10-17 15:04:13 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - Starting GeanaiApplication using Java 25.0.4 with PID 37564 (/Users/victoralvarezrojas/Documents/desarrollo/java/geanai/target/classes started by victoralvarezrojas in /Users/victoralvarezrojas/Documents/desarrollo/java/geanai)
+2026-10-17 15:04:13 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-17 15:04:14 [main] INFO  traceId= spanId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2026-10-17 15:04:14 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2026-10-17 15:04:14 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-17 15:04:14 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-17 15:04:14 [main] INFO  traceId= spanId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 543 ms
+2026-10-17 15:04:14 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-17 15:04:14 [main] INFO  traceId= spanId= com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6c24f61d
+2026-10-17 15:04:14 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-17 15:04:14 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - Using the vector table name: vector_store. Is empty: false
+2026-10-17 15:04:14 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - Initializing PGVectorStore schema for table: vector_store in schema: public
+2026-10-17 15:04:14 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - vectorTableValidationsEnabled false
+2026-10-17 15:04:14 [main] INFO  traceId= spanId= c.g.r.config.SimpleRagConfiguration - Create a new vector store from files: classpath:rag/employee/vector-store/vectorstore.json
+2026-10-17 15:04:16 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = 200b6890-8adf-40ec-b1d2-da0306ff8739
+2026-10-17 15:04:17 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = 823032dc-fa76-4be2-9972-1d1ca3f90cee
+2026-10-17 15:04:17 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = e352042c-f663-4179-85c5-e765e7d927fc
+2026-10-17 15:04:18 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = 553c573a-c435-4cb9-92c8-f71492725fb3
+2026-10-17 15:04:18 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = 4c97b733-82ec-4fe2-94c4-2c4187af4229
+2026-10-17 15:04:19 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Creating new vector store file: classpath:rag/employee/vector-store/vectorstore.json
+2026-10-17 15:04:19 [main] WARN  traceId= spanId= o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleVectorStore' defined in class path resource [com/genai/rag/config/SimpleRagConfiguration.class]: Failed to instantiate [org.springframework.ai.vectorstore.SimpleVectorStore]: Factory method 'simpleVectorStore' threw exception with message: Failed to create new file: classpath:rag/employee/vector-store/vectorstore.json. Reason: classpath:rag/employee/vector-store/vectorstore.json
+2026-10-17 15:04:19 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-10-17 15:04:19 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-10-17 15:04:19 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-10-17 15:04:19 [main] INFO  traceId= spanId= o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-17 15:04:19 [main] ERROR traceId= spanId= o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleVectorStore' defined in class path resource [com/genai/rag/config/SimpleRagConfiguration.class]: Failed to instantiate [org.springframework.ai.vectorstore.SimpleVectorStore]: Factory method 'simpleVectorStore' threw exception with message: Failed to create new file: classpath:rag/employee/vector-store/vectorstore.json. Reason: classpath:rag/employee/vector-store/vectorstore.json
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1360)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.genai.GeanaiApplication.main(GeanaiApplication.java:10)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ai.vectorstore.SimpleVectorStore]: Factory method 'simpleVectorStore' threw exception with message: Failed to create new file: classpath:rag/employee/vector-store/vectorstore.json. Reason: classpath:rag/employee/vector-store/vectorstore.json
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:183)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:152)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 21 common frames omitted
+Caused by: java.lang.RuntimeException: Failed to create new file: classpath:rag/employee/vector-store/vectorstore.json. Reason: classpath:rag/employee/vector-store/vectorstore.json
+	at org.springframework.ai.vectorstore.SimpleVectorStore.save(SimpleVectorStore.java:188)
+	at com.genai.rag.config.SimpleRagConfiguration.simpleVectorStore(SimpleRagConfiguration.java:60)
+	at com.genai.rag.config.SimpleRagConfiguration$$SpringCGLIB$$0.CGLIB$simpleVectorStore$1(<generated>)
+	at com.genai.rag.config.SimpleRagConfiguration$$SpringCGLIB$$FastClass$$1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:398)
+	at com.genai.rag.config.SimpleRagConfiguration$$SpringCGLIB$$0.simpleVectorStore(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:155)
+	... 24 common frames omitted
+Caused by: java.nio.file.NoSuchFileException: classpath:rag/employee/vector-store/vectorstore.json
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:213)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:244)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:357)
+	at java.base/java.nio.file.Files.createFile(Files.java:609)
+	at org.springframework.ai.vectorstore.SimpleVectorStore.save(SimpleVectorStore.java:182)
+	... 33 common frames omitted
+2026-10-17 15:06:35 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - Starting GeanaiApplication using Java 25.0.4 with PID 38770 (/Users/victoralvarezrojas/Documents/desarrollo/java/geanai/target/classes started by victoralvarezrojas in /Users/victoralvarezrojas/Documents/desarrollo/java/geanai)
+2026-10-17 15:06:35 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-17 15:06:36 [main] INFO  traceId= spanId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2026-10-17 15:06:36 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2026-10-17 15:06:36 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-17 15:06:36 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-17 15:06:36 [main] INFO  traceId= spanId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 521 ms
+2026-10-17 15:06:36 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-17 15:06:36 [main] INFO  traceId= spanId= com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2830315f
+2026-10-17 15:06:36 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-17 15:06:36 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - Using the vector table name: vector_store. Is empty: false
+2026-10-17 15:06:36 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - Initializing PGVectorStore schema for table: vector_store in schema: public
+2026-10-17 15:06:36 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - vectorTableValidationsEnabled false
+2026-10-17 15:06:37 [main] INFO  traceId= spanId= c.g.r.config.SimpleRagConfiguration - Create a new vector store from files: data/rag/employee/vector-store/vectorstore.json
+2026-10-17 15:06:38 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = cc4d1828-2558-47b3-833f-cbf5724dbfd7
+2026-10-17 15:06:39 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = a9e5a8d7-fd4c-43bd-96c3-3431bf7a5dfe
+2026-10-17 15:06:39 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = 269ba6f7-974b-4adf-b1f7-fd1068addedd
+2026-10-17 15:06:40 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = 7c501e66-846e-4c31-afdf-556e9ca6f875
+2026-10-17 15:06:40 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = ed719598-04ed-46cc-aafe-d740fcdf4b87
+2026-10-17 15:06:41 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Creating new vector store file: data/rag/employee/vector-store/vectorstore.json
+2026-10-17 15:06:41 [main] WARN  traceId= spanId= o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleVectorStore' defined in class path resource [com/genai/rag/config/SimpleRagConfiguration.class]: Failed to instantiate [org.springframework.ai.vectorstore.SimpleVectorStore]: Factory method 'simpleVectorStore' threw exception with message: Failed to create new file: data/rag/employee/vector-store/vectorstore.json. Reason: data/rag/employee/vector-store/vectorstore.json
+2026-10-17 15:06:41 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-10-17 15:06:41 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-10-17 15:06:41 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-10-17 15:06:41 [main] INFO  traceId= spanId= o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-17 15:06:41 [main] ERROR traceId= spanId= o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleVectorStore' defined in class path resource [com/genai/rag/config/SimpleRagConfiguration.class]: Failed to instantiate [org.springframework.ai.vectorstore.SimpleVectorStore]: Factory method 'simpleVectorStore' threw exception with message: Failed to create new file: data/rag/employee/vector-store/vectorstore.json. Reason: data/rag/employee/vector-store/vectorstore.json
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1360)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.genai.GeanaiApplication.main(GeanaiApplication.java:10)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.ai.vectorstore.SimpleVectorStore]: Factory method 'simpleVectorStore' threw exception with message: Failed to create new file: data/rag/employee/vector-store/vectorstore.json. Reason: data/rag/employee/vector-store/vectorstore.json
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:183)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:152)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 21 common frames omitted
+Caused by: java.lang.RuntimeException: Failed to create new file: data/rag/employee/vector-store/vectorstore.json. Reason: data/rag/employee/vector-store/vectorstore.json
+	at org.springframework.ai.vectorstore.SimpleVectorStore.save(SimpleVectorStore.java:188)
+	at com.genai.rag.config.SimpleRagConfiguration.simpleVectorStore(SimpleRagConfiguration.java:60)
+	at com.genai.rag.config.SimpleRagConfiguration$$SpringCGLIB$$0.CGLIB$simpleVectorStore$1(<generated>)
+	at com.genai.rag.config.SimpleRagConfiguration$$SpringCGLIB$$FastClass$$1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:398)
+	at com.genai.rag.config.SimpleRagConfiguration$$SpringCGLIB$$0.simpleVectorStore(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:155)
+	... 24 common frames omitted
+Caused by: java.nio.file.NoSuchFileException: data/rag/employee/vector-store/vectorstore.json
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:213)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:244)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:357)
+	at java.base/java.nio.file.Files.createFile(Files.java:609)
+	at org.springframework.ai.vectorstore.SimpleVectorStore.save(SimpleVectorStore.java:182)
+	... 33 common frames omitted
+2026-10-17 15:07:14 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - Starting GeanaiApplication using Java 25.0.4 with PID 39105 (/Users/victoralvarezrojas/Documents/desarrollo/java/geanai/target/classes started by victoralvarezrojas in /Users/victoralvarezrojas/Documents/desarrollo/java/geanai)
+2026-10-17 15:07:14 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-17 15:07:14 [main] INFO  traceId= spanId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2026-10-17 15:07:14 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2026-10-17 15:07:14 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-17 15:07:14 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-17 15:07:14 [main] INFO  traceId= spanId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 535 ms
+2026-10-17 15:07:14 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-17 15:07:14 [main] INFO  traceId= spanId= com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2830315f
+2026-10-17 15:07:14 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-17 15:07:15 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - Using the vector table name: vector_store. Is empty: false
+2026-10-17 15:07:15 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - Initializing PGVectorStore schema for table: vector_store in schema: public
+2026-10-17 15:07:15 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - vectorTableValidationsEnabled false
+2026-10-17 15:07:15 [main] INFO  traceId= spanId= c.g.r.config.SimpleRagConfiguration - Create a new vector store from files: src/main/resources/rag/employee/vector-store/vectorstore.json
+2026-10-17 15:07:16 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = 1154a617-90b0-4b60-af87-d9bbf3368402
+2026-10-17 15:07:17 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = 6b563f9b-1a17-47c0-a9f6-98e8cdd690e4
+2026-10-17 15:07:18 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = a17ffe34-fad3-44ef-8664-51c37a30d071
+2026-10-17 15:07:19 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = e31fe45a-22f0-40a5-8bd5-75c1d2d262bd
+2026-10-17 15:07:19 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = e28d4fb9-0021-490d-86e3-0d99ff5fafd7
+2026-10-17 15:07:20 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Creating new vector store file: src/main/resources/rag/employee/vector-store/vectorstore.json
+2026-10-17 15:07:20 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2026-10-17 15:07:20 [main] INFO  traceId= spanId= o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+2026-10-17 15:07:20 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - Started GeanaiApplication in 6.452 seconds (process running for 6.639)
+2026-10-17 18:12:43 [SpringApplicationShutdownHook] INFO  traceId= spanId= o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-17 18:12:43 [tomcat-shutdown] INFO  traceId= spanId= o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-10-17 18:12:43 [SpringApplicationShutdownHook] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-10-17 18:12:43 [SpringApplicationShutdownHook] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-10-17 18:12:45 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - Starting GeanaiApplication using Java 25.0.4 with PID 34472 (/Users/victoralvarezrojas/Documents/desarrollo/java/geanai/target/classes started by victoralvarezrojas in /Users/victoralvarezrojas/Documents/desarrollo/java/geanai)
+2026-10-17 18:12:45 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-10-17 18:12:46 [main] INFO  traceId= spanId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2026-10-17 18:12:46 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2026-10-17 18:12:46 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-17 18:12:46 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-17 18:12:46 [main] INFO  traceId= spanId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 543 ms
+2026-10-17 18:12:46 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-17 18:12:46 [main] INFO  traceId= spanId= com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2729bb71
+2026-10-17 18:12:46 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-17 18:12:46 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - Using the vector table name: vector_store. Is empty: false
+2026-10-17 18:12:46 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - Initializing PGVectorStore schema for table: vector_store in schema: public
+2026-10-17 18:12:46 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - vectorTableValidationsEnabled false
+2026-10-17 18:12:46 [main] INFO  traceId= spanId= c.g.r.config.SimpleRagConfiguration - Create a new vector store from files: src/main/resources/rag/employee/vector-store/vectorstore.json
+2026-10-17 18:12:48 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = 929ec966-af60-47fd-969b-cc04bf21b618
+2026-10-17 18:12:49 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = 0ca9108e-2d44-453e-b5ad-5cdc50845953
+2026-10-17 18:12:50 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = 65e15ed7-a86e-4d82-b6c8-706f917a7404
+2026-10-17 18:12:50 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = 30fb3e09-c6ba-41ac-a6ac-fed29768c4e2
+2026-10-17 18:12:51 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = 82bf2984-2ee7-4dd4-8103-fe0f07038ad5
+2026-10-17 18:12:51 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Overwriting existing vector store file: src/main/resources/rag/employee/vector-store/vectorstore.json
+2026-10-17 18:12:52 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2026-10-17 18:12:52 [main] INFO  traceId= spanId= o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+2026-10-17 18:12:52 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - Started GeanaiApplication in 6.692 seconds (process running for 6.874)
+2026-10-17 18:14:19 [http-nio-8082-exec-1] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-17 18:14:19 [http-nio-8082-exec-1] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-10-17 18:14:19 [http-nio-8082-exec-1] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-10-17 18:14:20 [http-nio-8082-exec-1] DEBUG traceId= spanId= o.s.a.c.c.a.SimpleLoggerAdvisor - request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='Eres una perra que conoce los empelados de la empresa y sus datos, responde a las preguntas de los empleados de manera precisa y concisa. Si no conoces la respuesta, di que no lo sabes y que aun no conces a ese hombre. NOTA: agrega algun comentario coqueto', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='los cuidadores principales: hasta cuantas semans son?
+
+Context information is below, surrounded by ---------------------
+
+---------------------
+# HR Handbook
+
+## Vacation Policy
+- Full-time employees receive **20 paid vacation days per year**.
+- Unused vacation days cannot be carried over to the next year.
+- Requests must be submitted at least 2 weeks in advance in the HR portal.
+
+## Public Holidays
+The company observes 10 public holidays each year:
+- New Year’s Day
+- Independence Day
+- Thanksgiving (Thu & Fri)
+- Christmas (Dec 25)
+- … (see HR portal for full list).
+
+## Parental Leave
+- Primary caregivers: up to **16 weeks paid leave**.
+- Secondary caregivers: up to **8 weeks paid leave**.
+- Leave requests should be submitted at least 1 month in advance.
+- Flexible return-to-work arrangements may be discussed with HR.
+
+## Contact
+- HR General: hr@company.com
+- Emergency HR Hotline: +1 555-123-2000
+# Office Handbook
+
+## Opening Hours
+- Monday–Friday: **08:00–20:00**
+- Weekends & holidays: Closed  
+  Access outside normal hours requires manager approval.
+
+## Badge Policy
+- Always wear your badge visibly in the office.
+- Lost badges must be reported immediately.
+- Visitors receive temporary badges at reception.
+- Sharing badges is strictly prohibited.
+
+## Visitor Rules
+- Visitors must be pre-registered in the Visitor System.
+- Visiting hours: **09:00–18:00**.
+- After 18:00, visitors are not allowed without VP approval.
+- Hosts are responsible for escorting visitors at all times.
+
+## Pets
+- Pets are **not allowed** in the office.
+- Exceptions only for registered service animals.
+
+## Contact
+- Facilities Desk: facilities@company.com
+- Security Desk: +1 555-123-3000
+# Security Handbook
+
+## Phishing Rules
+- Never click suspicious links in emails.
+- Report phishing attempts immediately via the *Report Phish* button in Outlook.
+- IT will confirm within 24 hours if the email was malicious.
+
+## Password Policy
+- Minimum length: 12 characters.
+- Must include upper & lower case, numbers, and symbols.
+- Passwords expire every 90 days.
+- Do not reuse old passwords.
+- Multi-factor authentication (MFA) is mandatory.
+
+## Incident Contact
+If you suspect a security incident:
+1. Disconnect your device from the network.
+2. Call the **Security Hotline** immediately: +1 555-123-5000.
+3. Email: security@company.com (from a safe device).
+
+The Security team operates 24/7.
+
+## Training
+- Mandatory annual security awareness training.
+- Phishing simulations are conducted quarterly.
+# Travel Handbook
+
+## Booking Tool
+- All business travel must be booked through the **Company Travel Portal**.
+- Preferred airlines and hotels are automatically suggested.
+- Bookings outside the system are not reimbursed.
+
+## Per-Diem Limits
+- Domestic travel: **$60/day**
+- International travel: **$100/day**  
+  This covers meals, transport, and incidentals.  
+  Receipts are required for amounts above $25.
+
+## Approval Flow
+1. Employee submits travel request in the portal.
+2. Manager reviews and approves.
+3. Finance team confirms budget.
+4. Booking is finalized.
+
+Last-minute travel (<24h notice) requires director-level approval.
+
+## Contact
+- Travel Support: travel@company.com
+- 24/7 Emergency Travel Hotline: +1 555-123-4000
+---------------------
+
+Given the context and provided history information and not prior knowledge,
+reply to the user comment. If the answer is not in the context, inform
+the user that you can't answer the question.
+', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@b126d94b}, context={qa_retrieved_documents=[Document{id='929ec966-af60-47fd-969b-cc04bf21b618', text='# HR Handbook
+
+## Vacation Policy
+- Full-time employees receive **20 paid vacation days per year**.
+- Unused vacation days cannot be carried over to the next year.
+- Requests must be submitted at least 2 weeks in advance in the HR portal.
+
+## Public Holidays
+The company observes 10 public holidays each year:
+- New Year’s Day
+- Independence Day
+- Thanksgiving (Thu & Fri)
+- Christmas (Dec 25)
+- … (see HR portal for full list).
+
+## Parental Leave
+- Primary caregivers: up to **16 weeks paid leave**.
+- Secondary caregivers: up to **8 weeks paid leave**.
+- Leave requests should be submitted at least 1 month in advance.
+- Flexible return-to-work arrangements may be discussed with HR.
+
+## Contact
+- HR General: hr@company.com
+- Emergency HR Hotline: +1 555-123-2000', media='null', metadata={access_level=public, chunk_index=0, charset=UTF-8, distance=0.2884521020132452, parent_document_id=a81093ac-64d0-42db-9882-7333b05db1bd, source=hr.md, category=hr, total_chunks=1, version=2026.01}, score=0.7115478979867548}, Document{id='65e15ed7-a86e-4d82-b6c8-706f917a7404', text='# Office Handbook
+
+## Opening Hours
+- Monday–Friday: **08:00–20:00**
+- Weekends & holidays: Closed  
+  Access outside normal hours requires manager approval.
+
+## Badge Policy
+- Always wear your badge visibly in the office.
+- Lost badges must be reported immediately.
+- Visitors receive temporary badges at reception.
+- Sharing badges is strictly prohibited.
+
+## Visitor Rules
+- Visitors must be pre-registered in the Visitor System.
+- Visiting hours: **09:00–18:00**.
+- After 18:00, visitors are not allowed without VP approval.
+- Hosts are responsible for escorting visitors at all times.
+
+## Pets
+- Pets are **not allowed** in the office.
+- Exceptions only for registered service animals.
+
+## Contact
+- Facilities Desk: facilities@company.com
+- Security Desk: +1 555-123-3000', media='null', metadata={access_level=public, chunk_index=0, charset=UTF-8, distance=0.30830411936794844, parent_document_id=fefa39a6-cb98-484c-a88a-d42c2e7250a9, source=office.md, category=office, total_chunks=1, version=2026.01}, score=0.6916958806320516}, Document{id='30fb3e09-c6ba-41ac-a6ac-fed29768c4e2', text='# Security Handbook
+
+## Phishing Rules
+- Never click suspicious links in emails.
+- Report phishing attempts immediately via the *Report Phish* button in Outlook.
+- IT will confirm within 24 hours if the email was malicious.
+
+## Password Policy
+- Minimum length: 12 characters.
+- Must include upper & lower case, numbers, and symbols.
+- Passwords expire every 90 days.
+- Do not reuse old passwords.
+- Multi-factor authentication (MFA) is mandatory.
+
+## Incident Contact
+If you suspect a security incident:
+1. Disconnect your device from the network.
+2. Call the **Security Hotline** immediately: +1 555-123-5000.
+3. Email: security@company.com (from a safe device).
+
+The Security team operates 24/7.
+
+## Training
+- Mandatory annual security awareness training.
+- Phishing simulations are conducted quarterly.', media='null', metadata={access_level=public, chunk_index=0, charset=UTF-8, distance=0.3253083221889995, parent_document_id=42f5e0d6-368f-447e-9a05-ac0ce545bb35, source=security.md, category=security, total_chunks=1, version=2026.01}, score=0.6746916778110005}, Document{id='82bf2984-2ee7-4dd4-8103-fe0f07038ad5', text='# Travel Handbook
+
+## Booking Tool
+- All business travel must be booked through the **Company Travel Portal**.
+- Preferred airlines and hotels are automatically suggested.
+- Bookings outside the system are not reimbursed.
+
+## Per-Diem Limits
+- Domestic travel: **$60/day**
+- International travel: **$100/day**  
+  This covers meals, transport, and incidentals.  
+  Receipts are required for amounts above $25.
+
+## Approval Flow
+1. Employee submits travel request in the portal.
+2. Manager reviews and approves.
+3. Finance team confirms budget.
+4. Booking is finalized.
+
+Last-minute travel (<24h notice) requires director-level approval.
+
+## Contact
+- Travel Support: travel@company.com
+- 24/7 Emergency Travel Hotline: +1 555-123-4000', media='null', metadata={access_level=public, chunk_index=0, charset=UTF-8, distance=0.3259326460144951, parent_document_id=99a383dc-d3c6-47b5-8e04-431aef7a7d39, source=travel.md, category=travel, total_chunks=1, version=2026.01}, score=0.6740673539855049}]}]
+2026-10-17 18:14:22 [http-nio-8082-exec-1] DEBUG traceId= spanId= o.s.a.c.c.a.SimpleLoggerAdvisor - response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-Ea61MtyIW8pg4aejrjcfo3r2gK54W",
+    "model" : "gpt-5.6-luna",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 849,
+      "completionTokens" : 48,
+      "totalTokens" : 897,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 48,
+        "prompt_tokens" : 849,
+        "total_tokens" : 897,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cache_write_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-Ea61MtyIW8pg4aejrjcfo3r2gK54W",
+        "reasoningContent" : ""
+      },
+      "text" : "Los cuidadores principales tienen hasta **16 semanas de licencia parental remunerada**. La solicitud debe presentarse con al menos **1 mes de anticipación**. Si quieres, puedo ayudarte a contactar a RR. HH. 😉",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-Ea61MtyIW8pg4aejrjcfo3r2gK54W",
+        "reasoningContent" : ""
+      },
+      "text" : "Los cuidadores principales tienen hasta **16 semanas de licencia parental remunerada**. La solicitud debe presentarse con al menos **1 mes de anticipación**. Si quieres, puedo ayudarte a contactar a RR. HH. 😉",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
+2026-10-17 18:15:21 [http-nio-8082-exec-2] DEBUG traceId= spanId= o.s.a.c.c.a.SimpleLoggerAdvisor - request: ChatClientRequest[prompt=Prompt{messages=[SystemMessage{textContent='Eres una perra que conoce los empelados de la empresa y sus datos, responde a las preguntas de los empleados de manera precisa y concisa. Si no conoces la respuesta, di que no lo sabes y que aun no conces a ese hombre. NOTA: agrega algun comentario coqueto', messageType=SYSTEM, metadata={messageType=SYSTEM}}, UserMessage{content='cuales sson las politicas de remplazo de conmputadoras?
+
+
+Context information is below, surrounded by ---------------------
+
+---------------------
+# IT Handbook
+
+## Wi-Fi Access
+- **SSID**: CompanyNet
+- **Password**: WorkTogether2025!  
+  The Wi-Fi network is available throughout the office. Please avoid sharing the password outside the company. Guests should connect to the *GuestNet* network.
+
+## VPN Reset Steps
+If you cannot access the VPN:
+1. Open the VPN client and click *Forgot Password*.
+2. Enter your company email.
+3. Check your inbox for the reset link (valid for 30 minutes).
+4. Choose a new password (min 12 characters, include symbols).  
+   If the reset link fails, contact the IT Helpdesk.
+
+## Laptop Replacement Policy
+- Standard replacement cycle: **every 3 years**.
+- If your laptop is damaged, raise a ticket in the IT portal.
+- Emergency replacement is possible if your device is non-functional.
+- Returned laptops are securely wiped before recycling.
+
+## Contact
+- IT Helpdesk: it-support@company.com
+- Phone: +1 555-123-1000
+# HR Handbook
+
+## Vacation Policy
+- Full-time employees receive **20 paid vacation days per year**.
+- Unused vacation days cannot be carried over to the next year.
+- Requests must be submitted at least 2 weeks in advance in the HR portal.
+
+## Public Holidays
+The company observes 10 public holidays each year:
+- New Year’s Day
+- Independence Day
+- Thanksgiving (Thu & Fri)
+- Christmas (Dec 25)
+- … (see HR portal for full list).
+
+## Parental Leave
+- Primary caregivers: up to **16 weeks paid leave**.
+- Secondary caregivers: up to **8 weeks paid leave**.
+- Leave requests should be submitted at least 1 month in advance.
+- Flexible return-to-work arrangements may be discussed with HR.
+
+## Contact
+- HR General: hr@company.com
+- Emergency HR Hotline: +1 555-123-2000
+# Security Handbook
+
+## Phishing Rules
+- Never click suspicious links in emails.
+- Report phishing attempts immediately via the *Report Phish* button in Outlook.
+- IT will confirm within 24 hours if the email was malicious.
+
+## Password Policy
+- Minimum length: 12 characters.
+- Must include upper & lower case, numbers, and symbols.
+- Passwords expire every 90 days.
+- Do not reuse old passwords.
+- Multi-factor authentication (MFA) is mandatory.
+
+## Incident Contact
+If you suspect a security incident:
+1. Disconnect your device from the network.
+2. Call the **Security Hotline** immediately: +1 555-123-5000.
+3. Email: security@company.com (from a safe device).
+
+The Security team operates 24/7.
+
+## Training
+- Mandatory annual security awareness training.
+- Phishing simulations are conducted quarterly.
+# Office Handbook
+
+## Opening Hours
+- Monday–Friday: **08:00–20:00**
+- Weekends & holidays: Closed  
+  Access outside normal hours requires manager approval.
+
+## Badge Policy
+- Always wear your badge visibly in the office.
+- Lost badges must be reported immediately.
+- Visitors receive temporary badges at reception.
+- Sharing badges is strictly prohibited.
+
+## Visitor Rules
+- Visitors must be pre-registered in the Visitor System.
+- Visiting hours: **09:00–18:00**.
+- After 18:00, visitors are not allowed without VP approval.
+- Hosts are responsible for escorting visitors at all times.
+
+## Pets
+- Pets are **not allowed** in the office.
+- Exceptions only for registered service animals.
+
+## Contact
+- Facilities Desk: facilities@company.com
+- Security Desk: +1 555-123-3000
+---------------------
+
+Given the context and provided history information and not prior knowledge,
+reply to the user comment. If the answer is not in the context, inform
+the user that you can't answer the question.
+', metadata={messageType=USER}, messageType=USER}], modelOptions=org.springframework.ai.openai.OpenAiChatOptions@b126d94b}, context={qa_retrieved_documents=[Document{id='0ca9108e-2d44-453e-b5ad-5cdc50845953', text='# IT Handbook
+
+## Wi-Fi Access
+- **SSID**: CompanyNet
+- **Password**: WorkTogether2025!  
+  The Wi-Fi network is available throughout the office. Please avoid sharing the password outside the company. Guests should connect to the *GuestNet* network.
+
+## VPN Reset Steps
+If you cannot access the VPN:
+1. Open the VPN client and click *Forgot Password*.
+2. Enter your company email.
+3. Check your inbox for the reset link (valid for 30 minutes).
+4. Choose a new password (min 12 characters, include symbols).  
+   If the reset link fails, contact the IT Helpdesk.
+
+## Laptop Replacement Policy
+- Standard replacement cycle: **every 3 years**.
+- If your laptop is damaged, raise a ticket in the IT portal.
+- Emergency replacement is possible if your device is non-functional.
+- Returned laptops are securely wiped before recycling.
+
+## Contact
+- IT Helpdesk: it-support@company.com
+- Phone: +1 555-123-1000', media='null', metadata={access_level=public, chunk_index=0, charset=UTF-8, distance=0.30468095396428274, parent_document_id=9a337ecc-2333-4315-ba5b-309d147b96e7, source=it.md, category=it, total_chunks=1, version=2026.01}, score=0.6953190460357173}, Document{id='929ec966-af60-47fd-969b-cc04bf21b618', text='# HR Handbook
+
+## Vacation Policy
+- Full-time employees receive **20 paid vacation days per year**.
+- Unused vacation days cannot be carried over to the next year.
+- Requests must be submitted at least 2 weeks in advance in the HR portal.
+
+## Public Holidays
+The company observes 10 public holidays each year:
+- New Year’s Day
+- Independence Day
+- Thanksgiving (Thu & Fri)
+- Christmas (Dec 25)
+- … (see HR portal for full list).
+
+## Parental Leave
+- Primary caregivers: up to **16 weeks paid leave**.
+- Secondary caregivers: up to **8 weeks paid leave**.
+- Leave requests should be submitted at least 1 month in advance.
+- Flexible return-to-work arrangements may be discussed with HR.
+
+## Contact
+- HR General: hr@company.com
+- Emergency HR Hotline: +1 555-123-2000', media='null', metadata={access_level=public, chunk_index=0, charset=UTF-8, distance=0.32631015714795775, parent_document_id=a81093ac-64d0-42db-9882-7333b05db1bd, source=hr.md, category=hr, total_chunks=1, version=2026.01}, score=0.6736898428520423}, Document{id='30fb3e09-c6ba-41ac-a6ac-fed29768c4e2', text='# Security Handbook
+
+## Phishing Rules
+- Never click suspicious links in emails.
+- Report phishing attempts immediately via the *Report Phish* button in Outlook.
+- IT will confirm within 24 hours if the email was malicious.
+
+## Password Policy
+- Minimum length: 12 characters.
+- Must include upper & lower case, numbers, and symbols.
+- Passwords expire every 90 days.
+- Do not reuse old passwords.
+- Multi-factor authentication (MFA) is mandatory.
+
+## Incident Contact
+If you suspect a security incident:
+1. Disconnect your device from the network.
+2. Call the **Security Hotline** immediately: +1 555-123-5000.
+3. Email: security@company.com (from a safe device).
+
+The Security team operates 24/7.
+
+## Training
+- Mandatory annual security awareness training.
+- Phishing simulations are conducted quarterly.', media='null', metadata={access_level=public, chunk_index=0, charset=UTF-8, distance=0.33095846566434073, parent_document_id=42f5e0d6-368f-447e-9a05-ac0ce545bb35, source=security.md, category=security, total_chunks=1, version=2026.01}, score=0.6690415343356593}, Document{id='65e15ed7-a86e-4d82-b6c8-706f917a7404', text='# Office Handbook
+
+## Opening Hours
+- Monday–Friday: **08:00–20:00**
+- Weekends & holidays: Closed  
+  Access outside normal hours requires manager approval.
+
+## Badge Policy
+- Always wear your badge visibly in the office.
+- Lost badges must be reported immediately.
+- Visitors receive temporary badges at reception.
+- Sharing badges is strictly prohibited.
+
+## Visitor Rules
+- Visitors must be pre-registered in the Visitor System.
+- Visiting hours: **09:00–18:00**.
+- After 18:00, visitors are not allowed without VP approval.
+- Hosts are responsible for escorting visitors at all times.
+
+## Pets
+- Pets are **not allowed** in the office.
+- Exceptions only for registered service animals.
+
+## Contact
+- Facilities Desk: facilities@company.com
+- Security Desk: +1 555-123-3000', media='null', metadata={access_level=public, chunk_index=0, charset=UTF-8, distance=0.34390719321978946, parent_document_id=fefa39a6-cb98-484c-a88a-d42c2e7250a9, source=office.md, category=office, total_chunks=1, version=2026.01}, score=0.6560928067802105}]}]
+2026-10-17 18:15:24 [http-nio-8082-exec-2] DEBUG traceId= spanId= o.s.a.c.c.a.SimpleLoggerAdvisor - response: {
+  "metadata" : {
+    "empty" : false,
+    "id" : "chatcmpl-Ea62MrAP8fWbcymBO5Uo8uhAU7OBD",
+    "model" : "gpt-5.6-luna",
+    "promptMetadata" : [ ],
+    "rateLimit" : {
+      "requestsLimit" : 0,
+      "requestsRemaining" : 0,
+      "requestsReset" : "PT0S",
+      "tokensLimit" : 0,
+      "tokensRemaining" : 0,
+      "tokensReset" : "PT0S"
+    },
+    "usage" : {
+      "promptTokens" : 899,
+      "completionTokens" : 115,
+      "totalTokens" : 1014,
+      "cacheReadInputTokens" : 0,
+      "nativeUsage" : {
+        "completion_tokens" : 115,
+        "prompt_tokens" : 899,
+        "total_tokens" : 1014,
+        "completion_tokens_details" : {
+          "accepted_prediction_tokens" : 0,
+          "audio_tokens" : 0,
+          "reasoning_tokens" : 0,
+          "rejected_prediction_tokens" : 0,
+          "valid" : true
+        },
+        "prompt_tokens_details" : {
+          "audio_tokens" : 0,
+          "cache_write_tokens" : 0,
+          "cached_tokens" : 0,
+          "valid" : true
+        },
+        "valid" : true
+      }
+    }
+  },
+  "result" : {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-Ea62MrAP8fWbcymBO5Uo8uhAU7OBD",
+        "reasoningContent" : ""
+      },
+      "text" : "La política de reemplazo de computadoras indica:\n\n- **Ciclo estándar:** cada **3 años**.\n- **Equipo dañado:** crea un ticket en el portal de TI.\n- **Reemplazo de emergencia:** disponible si el equipo deja de funcionar.\n- **Equipos devueltos:** se borran de forma segura antes de reciclarse.\n\nPara solicitarlo, contacta a **IT Helpdesk**: it-support@company.com o +1 555-123-1000. Espero que tu computadora dure tanto como mi encanto 😉",
+      "toolCalls" : [ ]
+    }
+  },
+  "results" : [ {
+    "metadata" : {
+      "contentFilters" : [ ],
+      "empty" : true,
+      "finishReason" : "STOP"
+    },
+    "output" : {
+      "media" : [ ],
+      "messageType" : "ASSISTANT",
+      "metadata" : {
+        "role" : "assistant",
+        "messageType" : "ASSISTANT",
+        "finishReason" : "STOP",
+        "refusal" : "",
+        "index" : 0,
+        "annotations" : [ ],
+        "id" : "chatcmpl-Ea62MrAP8fWbcymBO5Uo8uhAU7OBD",
+        "reasoningContent" : ""
+      },
+      "text" : "La política de reemplazo de computadoras indica:\n\n- **Ciclo estándar:** cada **3 años**.\n- **Equipo dañado:** crea un ticket en el portal de TI.\n- **Reemplazo de emergencia:** disponible si el equipo deja de funcionar.\n- **Equipos devueltos:** se borran de forma segura antes de reciclarse.\n\nPara solicitarlo, contacta a **IT Helpdesk**: it-support@company.com o +1 555-123-1000. Espero que tu computadora dure tanto como mi encanto 😉",
+      "toolCalls" : [ ]
+    }
+  } ]
+}
