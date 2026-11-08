@@ -26,32 +26,6 @@ public class SimpleRagConfiguration {
     private final static String FILE_PATH = "classpath:rag/employee/files/*.md";
     private final static String VECTOR_STORE_PATH = "src/main/resources/rag/employee/vector-store/vectorstore.json";
 
-
-    /**
-     * Splitter que divide los Document ya extraídos (por un DocumentReader) en chunks
-     * para generar embeddings. No participa en la extracción del texto; opera en la
-     * etapa de transformación del pipeline ETL.
-     *
-     * - chunkSize: tamaño objetivo de cada chunk, en tokens (encoding CL100K_BASE).
-     * - minChunkSizeChars: mínimo de caracteres antes de intentar cortar en el último
-     *   signo de puntuación (. ? ! \n). Si no se alcanza, el chunk se deja completo.
-     * - minChunkLengthToEmbed: chunks con menos caracteres que este valor (tras trim)
-     *   se descartan y no se embeben.
-     * - maxNumChunks: máximo de chunks por documento; el texto restante se descarta.
-     * - keepSeparator: true conserva los saltos de línea; false los reemplaza por espacios.
-     */
-    @Bean
-    public TokenTextSplitter tokenTextSplitter(RagConfigData ragConfigData){
-        return TokenTextSplitter.builder()
-                .withChunkSize(ragConfigData.getChunk().getSize())
-                .withMinChunkSizeChars(ragConfigData.getChunk().getMinChunkSize())
-                .withMinChunkLengthToEmbed(ragConfigData.getChunk().getMinChunkEmbed())
-                .withMaxNumChunks(ragConfigData.getChunk().getMaxNumChunks())
-                .withKeepSeparator(ragConfigData.getChunk().isKeepSeparator())
-                .build();
-    }
-
-
     /**
      * VectorStore en memoria (SimpleVectorStore) que usa el ChatClient para la recuperación en RAG.
      * Calcula la similitud por coseno sobre los embeddings que mantiene en memoria y puede

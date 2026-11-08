@@ -1,0 +1,2 @@
+2026-10-22 13:54:43 [SpringApplicationShutdownHook] INFO  traceId= spanId= o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-22 13:54:43 [tomcat-shutdown] INFO  traceId= spanId= o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete

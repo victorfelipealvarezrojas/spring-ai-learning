@@ -13,6 +13,9 @@ public class RagConfigData {
     private int topK;
     private double similarityThreshold;
     private ChunkProperties chunk;
+    private PdfProperties pdf;
+
+
 
     @Data
     public static class ChunkProperties {
@@ -21,6 +24,16 @@ public class RagConfigData {
         private int minChunkEmbed;
         private int maxNumChunks;
         private boolean keepSeparator;
+    }
+
+    @Data
+    public static class PdfProperties {
+        private String mode;
+        private String path;
+        private int pagesPerDocument;
+        private boolean leftAlignment;
+        private int numberOfTopTextLinesToDelete;
+        private int numberOfBottomTextLinesToDelete;
     }
 
 }

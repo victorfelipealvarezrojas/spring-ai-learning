@@ -13,9 +13,36 @@ app:
         min-chunk-to-embed: 50
         max-num-chunks: 8192
         keep-separator: true
+    pdf:
+      mode: page #parrafo
+      path: file:src/main/resources/rag/qa-over-internal-docs/*.pdf #classpath:rag/a-over-internal-docs/*.pdf -> esta forma no actualiza los documentos de forma dinamica
+      pages-per-document: 1
+      left-alignment: true
+      number-of-top-text-lines-to-delete: 0
+      number-of-bottom-text-lines-to-delete: 0
+
+
 spring:
   application:
     name: geanai
+
+  spring:
+    ai:
+      mcp:
+        server:
+          name: posture-service-mcp
+          version: 1.0.0
+          type: SYNC
+          instructions: "este servidor ofrece servicios de análisis de la postura"
+          sse-endpoint: /sse
+          see-message-endpoint: mcp/message
+          capabilities:
+            tool: true
+            resources: false
+            prompt: false
+            completion: false
+
+
   datasource:
     url: jdbc:postgresql://localhost:5432/postgresdb
     username: postgres
@@ -46,10 +73,12 @@ spring:
     # NOTA: si existe un @Bean PgVectorStore propio, este bloque se ignora.
     vectorstore:
           pgvector:
+            table-name-for-chat-memory: chat_vector_store
+            table-name-for-rag: rag_vector_store
             initialize-schema: true
             index-type: HNSW
             distance-type: COSINE_DISTANCE
-            dimensions: 1024
+            dimensions: 1536
             max-document-batch-size: 10_000
     google:
       genai:
