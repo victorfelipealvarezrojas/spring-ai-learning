@@ -6,6 +6,7 @@ import com.genai.chat.advisor.SystemPromptAdvisor;
 import com.genai.chat.advisor.ValidationAdvisor;
 import com.genai.rag.config.data.PgVectorStoreConfigData;
 import com.genai.rag.config.data.RagConfigData;
+import com.genai.rag.preprocessor.DomainSynonymTransformer;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.SafeGuardAdvisor;
 import org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor;
@@ -129,8 +130,12 @@ public class AIProviderConfig {
 
     @Bean
     RetrievalAugmentationAdvisor ragAdvisor(@Qualifier("ragVectorStore") VectorStore vectorStore,
-                                            RagConfigData ragConfigData){
+                                            RagConfigData ragConfigData,
+                                            DomainSynonymTransformer domainSynonymTransformer
+
+    ){
         return RetrievalAugmentationAdvisor.builder()
+                .queryTransformers(domainSynonymTransformer)
                 .documentRetriever(VectorStoreDocumentRetriever.builder()
                         .vectorStore(vectorStore)
                         .topK(ragConfigData.getTopK())

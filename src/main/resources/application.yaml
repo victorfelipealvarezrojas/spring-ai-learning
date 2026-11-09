@@ -20,7 +20,31 @@ app:
       left-alignment: true
       number-of-top-text-lines-to-delete: 0
       number-of-bottom-text-lines-to-delete: 0
-
+    synonyms:
+      PTO: "paid time off"
+      SSO: "single sign-on"
+      MFA: "multi-factor authentication"
+      2FA: "two-factor authentication"
+      IaC: "infrastructure as code"
+      PII: "personal data"
+      CI/CD: "continuous integration and delivery"
+      NAT: "network address translation"
+      GDPR: "data protection regulation"
+      VPN: "virtual private network"
+      SDLC: "software development lifecycle"
+      DNS: "domain name system"
+      IP: "internet protocol"
+      API: "application programming interface"
+      SDK: "software development kit"
+      UI: "user interface"
+      UX: "user experience"
+      DB: "database"
+      SQL: "structured query language"
+      NoSQL: "non-relational database"
+      OS: "operating system"
+      SSH: "secure shell"
+      HTTP: "hypertext transfer protocol"
+      HTTPS: "secure hypertext transfer protocol"
 
 spring:
   application:
