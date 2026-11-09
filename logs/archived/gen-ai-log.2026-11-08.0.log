@@ -1,0 +1,201 @@
+2026-11-08 16:14:45 [SpringApplicationShutdownHook] INFO  traceId= spanId= o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-11-08 16:14:45 [tomcat-shutdown] INFO  traceId= spanId= o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-11-08 16:14:45 [SpringApplicationShutdownHook] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-11-08 16:14:45 [SpringApplicationShutdownHook] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-11-08 16:14:46 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - Starting GeanaiApplication using Java 25.0.4 with PID 8407 (/Users/victoralvarezrojas/Documents/desarrollo/java/geanai/target/classes started by victoralvarezrojas in /Users/victoralvarezrojas/Documents/desarrollo/java/geanai)
+2026-11-08 16:14:46 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-08 16:14:47 [main] WARN  traceId= spanId= o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ai.mcp.server.common.autoconfigure.annotations.McpServerAnnotationScannerAutoConfiguration' of type [org.springframework.ai.mcp.server.common.autoconfigure.annotations.McpServerAnnotationScannerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [serverAnnotatedMethodBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-11-08 16:14:47 [main] WARN  traceId= spanId= o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'serverAnnotatedBeanRegistry' of type [org.springframework.ai.mcp.server.common.autoconfigure.annotations.McpServerAnnotationScannerAutoConfiguration$ServerMcpAnnotatedBeans] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [serverAnnotatedMethodBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-11-08 16:14:47 [main] WARN  traceId= spanId= o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.ai.mcp.server.annotation-scanner-org.springframework.ai.mcp.server.common.autoconfigure.annotations.McpServerAnnotationScannerProperties' of type [org.springframework.ai.mcp.server.common.autoconfigure.annotations.McpServerAnnotationScannerProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [serverAnnotatedMethodBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-11-08 16:14:47 [main] INFO  traceId= spanId= o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2026-11-08 16:14:47 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8082"]
+2026-11-08 16:14:47 [main] INFO  traceId= spanId= o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-11-08 16:14:47 [main] INFO  traceId= spanId= o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-11-08 16:14:47 [main] INFO  traceId= spanId= o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 578 ms
+2026-11-08 16:14:47 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-11-08 16:14:47 [main] INFO  traceId= spanId= com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5b066c33
+2026-11-08 16:14:47 [main] INFO  traceId= spanId= com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-11-08 16:14:47 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - Using the vector table name: rag_vector_store. Is empty: false
+2026-11-08 16:14:47 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - Initializing PGVectorStore schema for table: rag_vector_store in schema: public
+2026-11-08 16:14:47 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - vectorTableValidationsEnabled false
+2026-11-08 16:14:48 [main] INFO  traceId= spanId= c.g.r.config.SimpleRagConfiguration - Create a new vector store from files: src/main/resources/rag/employee/vector-store/vectorstore.json
+2026-11-08 16:14:50 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = a9c69335-0a9d-4aa1-8b51-152a9523547e
+2026-11-08 16:14:51 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = 4caa1509-1f0c-4052-afab-b5581ba6f224
+2026-11-08 16:14:52 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = 4e32a216-8fcb-4140-ae21-de4a628ce651
+2026-11-08 16:14:53 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = ef20139c-e9ab-437b-832b-2343881208c8
+2026-11-08 16:14:53 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Calling EmbeddingModel for document id = 008f8205-1aa0-4eb9-9950-54734bd92716
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.ai.vectorstore.SimpleVectorStore - Overwriting existing vector store file: src/main/resources/rag/employee/vector-store/vectorstore.json
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - Using the vector table name: chat_vector_store. Is empty: false
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - Initializing PGVectorStore schema for table: chat_vector_store in schema: public
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.v.pgvector.PgVectorStore - vectorTableValidationsEnabled false
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.m.s.c.a.McpServerAutoConfiguration - Enable tools capabilities, notification: true
+2026-11-08 16:14:54 [main] WARN  traceId= spanId= o.s.a.m.a.p.tool.SyncMcpToolProvider - No tool methods found in the provided tool objects: []
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.m.s.c.a.McpServerAutoConfiguration - Enable resources capabilities, notification: true
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.m.s.c.a.McpServerAutoConfiguration - Enable resources templates capabilities, notification: true
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.m.s.c.a.McpServerAutoConfiguration - Enable prompts capabilities, notification: true
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.m.s.c.a.McpServerAutoConfiguration - Enable completions capabilities
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8082"]
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path '/'
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= com.genai.GeanaiApplication - Started GeanaiApplication in 7.804 seconds (process running for 7.996)
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= c.g.rag.service.RagIngestionService - force-rebuild=true -> truncating rag_vector_store
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 1
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 2
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 3
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 4
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 5
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processed 5 selected pages of 5 total
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 1
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 2
+2026-11-08 16:14:54 [main] WARN  traceId= spanId= o.a.p.contentstream.PDFStreamEngine - Cannot execute restore, the graphics stack is empty
+org.apache.pdfbox.contentstream.operator.state.EmptyGraphicsStackException: Cannot execute restore, the graphics stack is empty
+	at org.apache.pdfbox.contentstream.operator.state.Restore.process(Restore.java:51)
+	at org.apache.pdfbox.contentstream.PDFStreamEngine.processOperator(PDFStreamEngine.java:931)
+	at org.apache.pdfbox.contentstream.PDFStreamEngine.processStreamOperators(PDFStreamEngine.java:564)
+	at org.apache.pdfbox.contentstream.PDFStreamEngine.processStream(PDFStreamEngine.java:522)
+	at org.apache.pdfbox.contentstream.PDFStreamEngine.processPage(PDFStreamEngine.java:158)
+	at org.apache.pdfbox.text.LegacyPDFStreamEngine.processPage(LegacyPDFStreamEngine.java:153)
+	at org.apache.pdfbox.text.PDFTextStripper.processPage(PDFTextStripper.java:379)
+	at org.springframework.ai.reader.pdf.layout.ForkPDFLayoutTextStripper.processPage(ForkPDFLayoutTextStripper.java:70)
+	at org.springframework.ai.reader.pdf.layout.PDFLayoutTextStripperByArea.extractRegions(PDFLayoutTextStripperByArea.java:126)
+	at org.springframework.ai.reader.pdf.PagePdfDocumentReader.handleSinglePage(PagePdfDocumentReader.java:182)
+	at org.springframework.ai.reader.pdf.PagePdfDocumentReader.get(PagePdfDocumentReader.java:146)
+	at org.springframework.ai.reader.pdf.PagePdfDocumentReader.get(PagePdfDocumentReader.java:50)
+	at org.springframework.ai.document.DocumentReader.read(DocumentReader.java:25)
+	at com.genai.rag.service.RagIngestionService.getDocumentParts(RagIngestionService.java:156)
+	at com.genai.rag.service.RagIngestionService.getDocuments(RagIngestionService.java:132)
+	at com.genai.rag.service.RagIngestionService.ingestDocumentChunksToVectorStore(RagIngestionService.java:109)
+	at com.genai.rag.service.RagIngestionService.initializePgVectorStore(RagIngestionService.java:76)
+	at com.genai.GeanaiApplication.run(GeanaiApplication.java:23)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$1(SpringApplication.java:792)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:791)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$0(SpringApplication.java:776)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:186)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:571)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:153)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:176)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:632)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:776)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:328)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.genai.GeanaiApplication.main(GeanaiApplication.java:18)
+2026-11-08 16:14:54 [main] WARN  traceId= spanId= o.a.p.contentstream.PDFStreamEngine - Cannot execute restore, the graphics stack is empty
+org.apache.pdfbox.contentstream.operator.state.EmptyGraphicsStackException: Cannot execute restore, the graphics stack is empty
+	at org.apache.pdfbox.contentstream.operator.state.Restore.process(Restore.java:51)
+	at org.apache.pdfbox.contentstream.PDFStreamEngine.processOperator(PDFStreamEngine.java:931)
+	at org.apache.pdfbox.contentstream.PDFStreamEngine.processStreamOperators(PDFStreamEngine.java:564)
+	at org.apache.pdfbox.contentstream.PDFStreamEngine.processStream(PDFStreamEngine.java:522)
+	at org.apache.pdfbox.contentstream.PDFStreamEngine.processPage(PDFStreamEngine.java:158)
+	at org.apache.pdfbox.text.LegacyPDFStreamEngine.processPage(LegacyPDFStreamEngine.java:153)
+	at org.apache.pdfbox.text.PDFTextStripper.processPage(PDFTextStripper.java:379)
+	at org.springframework.ai.reader.pdf.layout.ForkPDFLayoutTextStripper.processPage(ForkPDFLayoutTextStripper.java:70)
+	at org.springframework.ai.reader.pdf.layout.PDFLayoutTextStripperByArea.extractRegions(PDFLayoutTextStripperByArea.java:126)
+	at org.springframework.ai.reader.pdf.PagePdfDocumentReader.handleSinglePage(PagePdfDocumentReader.java:182)
+	at org.springframework.ai.reader.pdf.PagePdfDocumentReader.get(PagePdfDocumentReader.java:146)
+	at org.springframework.ai.reader.pdf.PagePdfDocumentReader.get(PagePdfDocumentReader.java:50)
+	at org.springframework.ai.document.DocumentReader.read(DocumentReader.java:25)
+	at com.genai.rag.service.RagIngestionService.getDocumentParts(RagIngestionService.java:156)
+	at com.genai.rag.service.RagIngestionService.getDocuments(RagIngestionService.java:132)
+	at com.genai.rag.service.RagIngestionService.ingestDocumentChunksToVectorStore(RagIngestionService.java:109)
+	at com.genai.rag.service.RagIngestionService.initializePgVectorStore(RagIngestionService.java:76)
+	at com.genai.GeanaiApplication.run(GeanaiApplication.java:23)
+	at org.springframework.boot.SpringApplication.lambda$callRunner$1(SpringApplication.java:792)
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82)
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60)
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:791)
+	at org.springframework.boot.SpringApplication.lambda$callRunners$0(SpringApplication.java:776)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:186)
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:571)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:153)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:176)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:632)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:776)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:328)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.genai.GeanaiApplication.main(GeanaiApplication.java:18)
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 3
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 4
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processed 4 selected pages of 4 total
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 1
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 2
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 3
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 4
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processed 4 selected pages of 4 total
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 1
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 2
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 3
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 4
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 5
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 6
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 7
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 8
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processed 8 selected pages of 8 total
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 1
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 2
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 3
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 4
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 5
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 6
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 7
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processed 7 selected pages of 7 total
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 1
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 2
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 3
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processing PDF page: 4
+2026-11-08 16:14:54 [main] INFO  traceId= spanId= o.s.a.r.pdf.PagePdfDocumentReader - Processed 4 selected pages of 4 total
+2026-11-08 16:14:55 [main] INFO  traceId= spanId= c.g.rag.service.RagIngestionService - Ingested 32 chunks into PgVector
+2026-11-08 16:17:25 [http-nio-8082-exec-2] INFO  traceId= spanId= o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-08 16:17:25 [http-nio-8082-exec-2] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-11-08 16:17:25 [http-nio-8082-exec-2] INFO  traceId= spanId= o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-11-08 16:17:25 [http-nio-8082-exec-2] ERROR traceId= spanId= c.g.e.h.GlobalExceptionsHandler - Excepted in: 
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/internal-qa for request '/api/internal-qa'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74)
+	at java.base/java.lang.Thread.run(Thread.java:1474)

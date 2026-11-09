@@ -6,6 +6,7 @@ import com.genai.chat.advisor.SystemPromptAdvisor;
 import com.genai.chat.advisor.ValidationAdvisor;
 import com.genai.rag.config.data.PgVectorStoreConfigData;
 import com.genai.rag.config.data.RagConfigData;
+import com.genai.rag.postprocessor.NeighbourStitchPostProcessor;
 import com.genai.rag.preprocessor.DomainSynonymTransformer;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.SafeGuardAdvisor;
@@ -131,8 +132,8 @@ public class AIProviderConfig {
     @Bean
     RetrievalAugmentationAdvisor ragAdvisor(@Qualifier("ragVectorStore") VectorStore vectorStore,
                                             RagConfigData ragConfigData,
-                                            DomainSynonymTransformer domainSynonymTransformer
-
+                                            DomainSynonymTransformer domainSynonymTransformer,
+                                            NeighbourStitchPostProcessor neighbourStitchPostProcessor
     ){
         return RetrievalAugmentationAdvisor.builder()
                 .queryTransformers(domainSynonymTransformer)
@@ -141,6 +142,7 @@ public class AIProviderConfig {
                         .topK(ragConfigData.getTopK())
                         .similarityThreshold(ragConfigData.getSimilarityThreshold())
                         .build())
+                .documentPostProcessors(neighbourStitchPostProcessor)
                 .queryAugmenter(ContextualQueryAugmenter.builder()
                         .allowEmptyContext(false)
                         .build())

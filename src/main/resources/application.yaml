@@ -6,7 +6,8 @@ app:
   rag:
     force-rebuild: true
     top-k: 4
-    similarity-threshold: 0.0
+    similarity-threshold: 0.75
+    radius: 1
     chunk:
         size: 800
         min-chunk-size: 200

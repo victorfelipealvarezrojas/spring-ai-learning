@@ -14,9 +14,11 @@ public class RagConfigData {
     private boolean forceRebuild;
     private int topK;
     private double similarityThreshold;
+    private int radius;
     private ChunkProperties chunk;
     private PdfProperties pdf;
     private Map<String,String> synonyms;
+
 
     @Data
     public static class ChunkProperties {
